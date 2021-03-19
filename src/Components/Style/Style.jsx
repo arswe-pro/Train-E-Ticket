@@ -1,8 +1,17 @@
 import { makeStyles } from '@material-ui/core/styles';
+import road from '../../images/road.jpg';
+import trains from '../../images/trains.jpg';
+import bg from '../../images/shot.jpg'
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+    },
+    homeBg: {
+        backgroundImage: `linear-gradient(rgba(255,0,100, 0.4), rgba(22,22,222, 0.4)),url(${bg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        height: '92vh'
     },
     NoMatch: {
         textAlign: 'center',
@@ -29,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
     },
 
     btn: {
@@ -38,8 +46,17 @@ const useStyles = makeStyles((theme) => ({
     media: {
         height: 140,
     },
+    searchResultBg: {
+        backgroundImage: `url(${road})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+    },
 
-
+    searchLocationBg: {
+        backgroundImage: `url(${trains})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+    },
 }));
 
 export default useStyles;

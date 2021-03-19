@@ -8,13 +8,10 @@ import Search from './Search/Search';
 
 const SearchLocation = () => {
     const classes = useStyles();
-
     let { id } = useParams();
     console.log(id);
-
-
     return (
-        <div>
+        <div className={classes.searchLocationBg}>
             <Header />
             <Container>
                 <Grid container spacing={3}>

@@ -8,8 +8,7 @@ import RoadMap from './RoadMap/RoadMap';
 const SearchResult = () => {
     const classes = useStyles();
     return (
-
-        <div>
+        <div className={classes.searchResultBg}>
             <Header />
             <Container>
                 <Grid container spacing={3}>

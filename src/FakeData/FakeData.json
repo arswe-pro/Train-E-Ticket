@@ -1,142 +1,30 @@
 [
     {
         "id": 1,
-        "title": "Computer Systems Analyst I",
+        "title": "AC - B",
         "price": 12,
         "img": "http://dummyimage.com/187x160.png/5fa2dd/ffffff",
         "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh."
     },
     {
         "id": 2,
-        "title": "Quality Control Specialist",
-        "price": 82,
-        "img": "http://dummyimage.com/211x112.png/dddddd/000000",
-        "description": "Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst."
-    },
-    {
-        "id": 3,
-        "title": "Accountant III",
-        "price": 63,
-        "img": "http://dummyimage.com/104x210.bmp/cc0000/ffffff",
-        "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti."
-    },
-    {
-        "id": 4,
-        "title": "Nurse Practicioner",
-        "price": 42,
-        "img": "http://dummyimage.com/171x185.bmp/dddddd/000000",
-        "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum."
-    },
-    {
-        "id": 5,
-        "title": "Staff Accountant II",
-        "price": 55,
-        "img": "http://dummyimage.com/194x209.png/5fa2dd/ffffff",
-        "description": "Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum."
-    },
-    {
-        "id": 67,
-        "title": "Physical Therapy Assistant",
-        "price": 6,
-        "img": "http://dummyimage.com/189x180.bmp/dddddd/000000",
-        "description": "Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci."
-    },
-    {
-        "id": 7,
-        "title": "Account Coordinator",
-        "price": 17,
-        "img": "http://dummyimage.com/173x178.jpg/cc0000/ffffff",
-        "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet."
-    },
-    {
-        "id": 8,
-        "title": "Developer III",
-        "price": 28,
-        "img": "http://dummyimage.com/230x119.bmp/dddddd/000000",
-        "description": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia."
-    },
-    {
-        "id": 9,
-        "title": "Chemical Engineer",
-        "price": 91,
-        "img": "http://dummyimage.com/130x117.jpg/cc0000/ffffff",
-        "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
-    },
-    {
-        "id": 10,
-        "title": "VP Sales",
-        "price": 14,
-        "img": "http://dummyimage.com/227x139.jpg/ff4444/ffffff",
-        "description": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh."
-    },
-    {
-        "id": 11,
-        "title": "Environmental Tech",
-        "price": 61,
-        "img": "http://dummyimage.com/180x110.jpg/cc0000/ffffff",
-        "description": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy."
-    },
-    {
-        "id": 12,
-        "title": "Research Assistant III",
-        "price": 82,
-        "img": "http://dummyimage.com/244x188.jpg/cc0000/ffffff",
-        "description": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque."
-    },
-    {
-        "id": 13,
-        "title": "Statistician III",
-        "price": 36,
-        "img": "http://dummyimage.com/198x103.png/dddddd/000000",
-        "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet."
-    },
-    {
-        "id": 14,
-        "title": "Internal Auditor",
-        "price": 44,
-        "img": "http://dummyimage.com/188x246.jpg/5fa2dd/ffffff",
-        "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus."
-    },
-    {
-        "id": 15,
-        "title": "Nuclear Power Engineer",
-        "price": 95,
-        "img": "http://dummyimage.com/105x194.png/5fa2dd/ffffff",
-        "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl."
-    },
-    {
-        "id": 16,
-        "title": "Accountant IV",
+        "title": "AC - S",
         "price": 96,
         "img": "http://dummyimage.com/227x224.bmp/ff4444/ffffff",
         "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus."
     },
     {
-        "id": 17,
-        "title": "Structural Engineer",
+        "id": 3,
+        "title": "SNIGDHA",
         "price": 19,
         "img": "http://dummyimage.com/206x130.bmp/cc0000/ffffff",
         "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis."
     },
     {
-        "id": 18,
-        "title": "Quality Control Specialist",
+        "id": 4,
+        "title": "S -CHAIR",
         "price": 68,
         "img": "http://dummyimage.com/118x154.png/ff4444/ffffff",
         "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus."
-    },
-    {
-        "id": 19,
-        "title": "Speech Pathologist",
-        "price": 86,
-        "img": "http://dummyimage.com/160x185.bmp/5fa2dd/ffffff",
-        "description": "Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
-    },
-    {
-        "id": 20,
-        "title": "Budget/Accounting Analyst III",
-        "price": 100,
-        "img": "http://dummyimage.com/103x218.bmp/dddddd/000000",
-        "description": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor."
     }
 ]

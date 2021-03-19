@@ -1,4 +1,5 @@
 import { Button, CardMedia, Grid, Paper, Typography } from '@material-ui/core';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useStyles from '../../Style/Style';
@@ -15,7 +16,9 @@ const Item = ({ item }) => {
                         {title}
                     </Typography>
 
-                    <Link to={"/SearchLocation/" + id} className={classes.link}>  <Button className={classes.btn} size="small" variant="contained" >Book Now</Button> </Link>
+                    <Link to={"/SearchLocation/" + id} className={classes.link}>
+                        <Button className={classes.btn} size="small" variant="contained" color="secondary" > <ShoppingCartIcon /> Book Now</Button>
+                    </Link>
 
                     <Typography color="textSecondary" gutterBottom>
                         ${price}

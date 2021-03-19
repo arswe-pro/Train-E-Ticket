@@ -3,19 +3,87 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 
+
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+import { useForm } from 'react-hook-form';
+
+
+const schema = yup.object().shape({
+    name: yup.string().required().min(6),
+    email: yup.string().required().email(),
+    password: yup.string().required().min(6),
+    confirmPassword: yup.string().required().oneOf([yup.ref('password'), null], ''),
+});
+
+
 const Register = () => {
+
+
+    const { register, handleSubmit, errors } = useForm({
+        mode: "onTouched",
+        resolver: yupResolver(schema)
+    })
+    const onSubmit = data => console.log(data);
+    console.log(errors);
+
     return (
         <>
             <Header />
             <Container>
                 <Grid container spacing={3} direction="row" justify="center" alignItems="center">
                     <Grid item xs={12} sm={6} md={6} lg={4}>
-                        <form style={{marginTop:'2rem'}}>
-                            <TextField type="name" fullWidth margin="normal" id="name" label="Name" variant="filled" />
-                            <TextField type="email" fullWidth margin="normal" id="email" label="Email" variant="filled" />
-                            <TextField type="password" fullWidth margin="normal" id="password" label="Password" variant="filled" />
-                            <TextField type="password" fullWidth margin="normal" id="confirmPassword" label="confirm Password" variant="filled" />
-                            <Button type="button" fullWidth variant="contained" color="secondary">Sign UP</Button>
+                        <form onSubmit={handleSubmit(onSubmit)} style={{ marginTop: '2rem' }}>
+                            <TextField
+                                type="text"
+                                name="name"
+                                fullWidth
+                                margin="normal"
+                                id="name"
+                                label="Name"
+                                variant="filled"
+                                inputRef={register}
+                                error={Boolean(errors.name)}
+                                helperText={errors.name?.message}
+                            />
+                            <TextField
+                                type="text"
+                                name="email"
+                                margin="normal"
+                                fullWidth
+                                inputRef={register}
+                                label="Email"
+                                variant="filled"
+                                autoComplete="off"
+                                error={Boolean(errors.email)}
+                                helperText={errors.email?.message}
+                            />
+                            <TextField
+                                type="text"
+                                name="password"
+                                margin="normal"
+                                fullWidth inputRef={register}
+                                label="Password"
+                                variant="filled"
+                                autoComplete="off"
+                                error={Boolean(errors.password)}
+                                helperText={errors.password?.message}
+                            />
+
+                            <TextField
+                                type="text"
+                                name="confirmPassword"
+                                margin="normal"
+                                fullWidth inputRef={register}
+                                label="Confirm Password"
+                                variant="filled"
+                                autoComplete="off"
+                                error={Boolean(errors.confirmPassword)}
+                                helperText={errors.confirmPassword?.message}
+                            />
+
+
+                            <Button type="submit" fullWidth variant="contained" color="secondary">Sign UP</Button>
                         </form>
                         <Link to="/Login" variant="body2">
                             You have a account? Login

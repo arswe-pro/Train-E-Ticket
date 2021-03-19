@@ -3,14 +3,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from "yup";
-import { useForm } from 'react-hook-form';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import ShopIcon from '@material-ui/icons/Shop';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import SendIcon from '@material-ui/icons/Send';
+
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+import { useForm } from 'react-hook-form';
+
 
 const schema = yup.object().shape({
     email: yup.string().required().email(),

@@ -4,9 +4,7 @@ import Item from './Item/Item';
 import FakeDate from '../../FakeData/FakeData.json'
 
 const AllCard = () => {
-
     const [items, setItems] = useState(FakeDate)
-
     useEffect(() => {
         setItems(items)
     }, [items])
