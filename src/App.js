@@ -6,16 +6,15 @@ import Login from './Components/Form/Login';
 import Register from './Components/Form/Register';
 import Contact from './Components/Contact/Contact';
 import SearchLocation from './Components/SearchLocation/SearchLocation';
-// import { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 import SearchResult from './Components/SearchResult/SearchResult';
-// import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
-// export const UserContext = createContext();
-
+export const UserContext = createContext();
 function App() {
-	// const [loggedInUser, setLoggedInUser] = useState({})
+	const [loggedInUser, setLoggedInUser] = useState({})
 	return (
-		// <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+		<UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
 			<Router>
 				<Switch>
 
@@ -25,19 +24,19 @@ function App() {
 
 					<Route path="/Contact"> <Contact /> </Route>
 
-					<Route  path="/SearchLocation/:id"> <SearchLocation /> </Route>
+					<PrivateRoute  path="/SearchLocation/:title"> <SearchLocation /> </PrivateRoute>
 
 					<Route path="/Login"> <Login /> </Route>
 
 					<Route path="/Register"> <Register /> </Route>
 
-					<Route path="/SearchResult"> <SearchResult /> </Route>
+					<PrivateRoute path="/SearchResult"> <SearchResult /> </PrivateRoute>
 
 					<Route path="*"> <NoMatch /> </Route>
 
 				</Switch>
 			</Router>
-		// </UserContext.Provider >
+		</UserContext.Provider >
 
 	);
 }

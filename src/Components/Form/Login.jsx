@@ -1,14 +1,20 @@
+import firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from './firebase.config'
+import { UserContext } from '../../App';
+/*************** Auth End **************** */
+
 import { Button, Container, Grid, TextField } from '@material-ui/core';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import ShopIcon from '@material-ui/icons/Shop';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import SendIcon from '@material-ui/icons/Send';
 
+/************* validation **************** */
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useForm } from 'react-hook-form';
@@ -19,13 +25,76 @@ const schema = yup.object().shape({
     password: yup.string().required().min(6)
 });
 
+/************* validation End**************** */
+
+
+
 const Login = () => {
+
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    /**** Validation **** */
     const { register, handleSubmit, errors } = useForm({
-        mode: "onTouched",
+        mode: "onChange",
         resolver: yupResolver(schema)
     })
     const onSubmit = data => console.log(data);
-    console.log(errors);
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const history = useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: "/" } };
+
+
+    const GoogleProvider = new firebase.auth.GoogleAuthProvider();
+    const googleSignIn = () => {
+        firebase.auth()
+            .signInWithPopup(GoogleProvider)
+            .then((result) => {
+                /** @type {firebase.auth.OAuthCredential} */
+                const credential = result.credential;
+                const token = credential.accessToken;
+                const { displayName, email } = result.user;
+                const signInUser = { name: displayName, email }
+                setLoggedInUser(signInUser)
+                history.replace(from);
+                console.log(token);
+            }).catch((error) => {
+                const errorCode = error.code;
+                const email = error.email;
+                const credential = error.credential;
+                console.log(errorCode, email, credential);
+            });
+    }
+
+    const facebookProvider = new firebase.auth.FacebookAuthProvider();
+    const facebookSignIn = () => {
+        firebase
+            .auth()
+            .signInWithPopup(facebookProvider)
+            .then((result) => {
+                /** @type {firebase.auth.OAuthCredential} */
+                var credential = result.credential;
+                const { displayName, email } = result.user;
+                var accessToken = credential.accessToken;
+                const signInUser = { name: displayName, email }
+                setLoggedInUser(signInUser)
+                history.replace(from);
+                console.log(accessToken);
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                var email = error.email;
+                var credential = error.credential;
+                console.log(errorCode, email, errorMessage, credential);
+            });
+    }
+
+
+
+
     return (
         <>
             <Header />
@@ -62,9 +131,8 @@ const Login = () => {
                         <Link to="/Register" variant="body2">
                             Already have an account? Sign in
                         </Link>
-                        <Button style={{ marginTop: '1rem', }} type="submit" fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
-                        <Button style={{ margin: '5px 0', }} type="submit" fullWidth variant="contained" color="primary"> <FacebookIcon /> Facebook</Button>
-                        <Button type="submit" fullWidth variant="contained" color="primary"> <GitHubIcon /> Github</Button>
+                        <Button onClick={googleSignIn} style={{ marginTop: '1rem', }} type="submit" fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
+                        <Button onClick={facebookSignIn} style={{ margin: '5px 0', }} type="submit" fullWidth variant="contained" color="primary"> <FacebookIcon /> Facebook</Button>
                     </Grid>
                 </Grid>
             </Container>

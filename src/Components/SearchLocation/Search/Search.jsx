@@ -4,24 +4,16 @@ import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 
 const Search = () => {
+
     return (
         <div>
             <form style={{ marginTop: '2rem' }}>
+
                 <TextField
-                    type="text"
-                    name="email"
-                    margin="normal"
-                    fullWidth
-                    label="Pink From"
-                    variant="filled"
-                    autoComplete="off"
-                />
-                <TextField
-                    type="text"
+                    type="date"
                     name="password"
                     margin="normal"
                     fullWidth
-                    label="Pink To"
                     variant="filled"
                     autoComplete="off"
                 />

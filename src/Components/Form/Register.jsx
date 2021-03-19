@@ -16,17 +16,13 @@ const schema = yup.object().shape({
     confirmPassword: yup.string().required().oneOf([yup.ref('password'), null], ''),
 });
 
-
 const Register = () => {
-
-
     const { register, handleSubmit, errors } = useForm({
-        mode: "onTouched",
+        mode: "onChange",
         resolver: yupResolver(schema)
     })
     const onSubmit = data => console.log(data);
     console.log(errors);
-
     return (
         <>
             <Header />

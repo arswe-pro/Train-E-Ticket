@@ -4,7 +4,7 @@ import map from '../../../images/map.png';
 const ResultMap = () => {
     return (
         <div>
-            <img src={map} alt="map" />
+            <img src={map} style={{height: '500px' , width: '100%'}} alt="map" />
         </div>
     );
 };

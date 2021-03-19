@@ -1,30 +1,38 @@
 [
     {
         "id": 1,
-        "title": "AC - B",
-        "price": 12,
-        "img": "http://dummyimage.com/187x160.png/5fa2dd/ffffff",
-        "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh."
+        "title": "AC-B",
+        "price": 145,
+        "img": "http://dummyimage.com/134x169.jpg/cc0000/ffffff",
+        "logo": "http://dummyimage.com/145x228.png/cc0000/ffffff",
+        "division": "Civil Engineer",
+        "description": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio."
     },
     {
         "id": 2,
-        "title": "AC - S",
-        "price": 96,
-        "img": "http://dummyimage.com/227x224.bmp/ff4444/ffffff",
-        "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus."
+        "title": "AC-S",
+        "price": 85,
+        "img": "http://dummyimage.com/209x131.png/dddddd/000000",
+        "logo": "http://dummyimage.com/107x106.bmp/dddddd/000000",
+        "division": "Safety Technician I",
+        "description": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus."
     },
     {
         "id": 3,
-        "title": "SNIGDHA",
-        "price": 19,
-        "img": "http://dummyimage.com/206x130.bmp/cc0000/ffffff",
-        "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis."
+        "title": "SNINDHA",
+        "price": 314,
+        "img": "http://dummyimage.com/191x125.bmp/ff4444/ffffff",
+        "logo": "http://dummyimage.com/103x112.bmp/dddddd/000000",
+        "division": "Geological Engineer",
+        "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet."
     },
     {
         "id": 4,
-        "title": "S -CHAIR",
-        "price": 68,
-        "img": "http://dummyimage.com/118x154.png/ff4444/ffffff",
-        "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus."
+        "title": "S_CHAIR",
+        "price": 120,
+        "img": "http://dummyimage.com/112x134.png/ff4444/ffffff",
+        "logo": "http://dummyimage.com/224x190.bmp/dddddd/000000",
+        "division": "Assistant Media Planner",
+        "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla."
     }
 ]

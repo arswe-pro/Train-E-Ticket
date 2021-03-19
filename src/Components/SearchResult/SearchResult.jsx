@@ -12,12 +12,12 @@ const SearchResult = () => {
             <Header />
             <Container>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} sm={5} md={4} lg={3}>
+                    <Grid item xs={12} sm={12} md={4} lg={3}>
                         <Paper className={classes.paper}>
                             <RoadMap />
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} sm={7} md={8} lg={9}>
+                    <Grid item xs={12} sm={12} md={8} lg={9}>
                         <Paper className={classes.paper}>
                             <ResultMap />
                         </Paper>

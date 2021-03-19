@@ -6,7 +6,7 @@ import useStyles from '../../Style/Style';
 
 const Item = ({ item }) => {
     const classes = useStyles();
-    const { id, title, price, img } = item
+    const { title, price, img } = item
     return (
         <>
             <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -16,7 +16,7 @@ const Item = ({ item }) => {
                         {title}
                     </Typography>
 
-                    <Link to={"/SearchLocation/" + id} className={classes.link}>
+                    <Link to={"/SearchLocation/" + title} className={classes.link}>
                         <Button className={classes.btn} size="small" variant="contained" color="secondary" > <ShoppingCartIcon /> Book Now</Button>
                     </Link>
 
