@@ -5,6 +5,10 @@ const useStyles = makeStyles((theme) => ({
 
     },
 
+    container: {
+        margin: '0 auto'
+    },
+
     NoMatch: {
         textAlign: 'center',
     },
@@ -27,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: 'uppercase',
         color: '#fff',
     },
+    
 
 }));
 
