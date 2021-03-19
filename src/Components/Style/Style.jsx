@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         margin: '1rem 0',
     },
+    media: {
+        height: 140,
+    },
 
 
 }));

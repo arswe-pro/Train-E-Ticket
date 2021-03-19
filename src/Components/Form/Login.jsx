@@ -32,7 +32,6 @@ const Login = () => {
                     <Grid item xs={12} sm={6} md={6} lg={4}>
 
                         <form onSubmit={handleSubmit(onSubmit)} style={{ marginTop: '2rem' }}>
-
                             <TextField
                                 type="text"
                                 name="email"
@@ -55,10 +54,7 @@ const Login = () => {
                                 error={Boolean(errors.password)}
                                 helperText={errors.password?.message}
                             />
-
-
                             <Button type="submit" fullWidth variant="contained" color="primary" style={{ margin: '01rem 0' }}> <SendIcon /> Sign in</Button>
-
                         </form>
 
                         <Link to="/Register" variant="body2">
