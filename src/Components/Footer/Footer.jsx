@@ -1,6 +1,5 @@
 import { Card } from '@material-ui/core';
 import React from 'react';
-import classes from './Footer.module.css';
 
 const Footer = () => {
     return (
