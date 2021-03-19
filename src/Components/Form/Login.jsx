@@ -7,6 +7,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useForm } from 'react-hook-form';
 
+import FacebookIcon from '@material-ui/icons/Facebook';
+import ShopIcon from '@material-ui/icons/Shop';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import SendIcon from '@material-ui/icons/Send';
+
 const schema = yup.object().shape({
     email: yup.string().required().email(),
     password: yup.string().required().min(6)
@@ -28,21 +33,40 @@ const Login = () => {
 
                         <form onSubmit={handleSubmit(onSubmit)} style={{ marginTop: '2rem' }}>
 
-                            <TextField type="text" name="email" margin="normal" fullWidth inputRef={register} label="Email" variant="filled" autoComplete="off" />
-                            <p>{errors.email?.message}</p>
-                            <TextField type="text" name="password" margin="normal" fullWidth inputRef={register} label="Password" variant="filled" autoComplete="off" />
-                            <p>{errors.password?.message}</p>
+                            <TextField
+                                type="text"
+                                name="email"
+                                margin="normal"
+                                fullWidth inputRef={register}
+                                label="Email"
+                                variant="filled"
+                                autoComplete="off"
+                                error={Boolean(errors.email)}
+                                helperText={errors.email?.message}
+                            />
+                            <TextField
+                                type="text"
+                                name="password"
+                                margin="normal"
+                                fullWidth inputRef={register}
+                                label="Password"
+                                variant="filled"
+                                autoComplete="off"
+                                error={Boolean(errors.password)}
+                                helperText={errors.password?.message}
+                            />
 
-                            <Button type="submit" fullWidth variant="contained" > Sign in</Button>
+
+                            <Button type="submit" fullWidth variant="contained" color="primary" style={{ margin: '01rem 0' }}> <SendIcon /> Sign in</Button>
 
                         </form>
 
                         <Link to="/Register" variant="body2">
                             Already have an account? Sign in
                         </Link>
-                        <Button style={{ marginTop: '1rem', }} type="submit" fullWidth variant="contained">Google</Button>
-                        <Button style={{ margin: '5px 0', }} type="submit" fullWidth variant="contained">Facebook</Button>
-                        <Button type="submit" fullWidth variant="contained">Github</Button>
+                        <Button style={{ marginTop: '1rem', }} type="submit" fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
+                        <Button style={{ margin: '5px 0', }} type="submit" fullWidth variant="contained" color="primary"> <FacebookIcon /> Facebook</Button>
+                        <Button type="submit" fullWidth variant="contained" color="primary"> <GitHubIcon /> Github</Button>
                     </Grid>
                 </Grid>
             </Container>

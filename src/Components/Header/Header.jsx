@@ -10,7 +10,7 @@ const Header = () => {
         <div className={classes.root} >
             <CssBaseline />
             <AppBar position="static" elevation={0} className={classes.appBar}>
-                <Toolbar className={classes.toolbar}>
+                <Toolbar variant="dense" className={classes.toolbar}>
                     <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
                         React Lover
                     </Typography>

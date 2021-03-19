@@ -1,12 +1,13 @@
+import { Card } from '@material-ui/core';
 import React from 'react';
 import classes from './Footer.module.css';
 
 const Footer = () => {
     return (
         <footer>
-            <div className={['container', classes.container].join(' ')}>
-                <div>Copyright &copy;2020. Built with <span className="red">&hearts;</span> by  Create React App</div>
-            </div>
+            <Card style={{ padding: '1rem 0', textAlign: 'center' }}>
+                <div>Copyright &copy;2021. Built with <span> &hearts; Abdur rahman</span> by  Create Booking App</div>
+            </Card>
         </footer>
     );
 };
