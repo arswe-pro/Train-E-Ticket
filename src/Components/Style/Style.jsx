@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `linear-gradient(rgba(255,0,100, 0.4), rgba(22,22,222, 0.4)),url(${bg})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '92vh'
+        height: '100vh'
     },
     NoMatch: {
         textAlign: 'center',
@@ -57,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
     },
+    mt: {
+        marginTop: '2rem',
+    }
 }));
 
 export default useStyles;

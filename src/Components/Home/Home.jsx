@@ -1,6 +1,6 @@
 import React from 'react';
 import AllCard from '../AllCard/AllCard';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import useStyles from '../Style/Style';
 
@@ -12,7 +12,7 @@ const Home = () => {
                 <Header />
                 <AllCard />
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 };
