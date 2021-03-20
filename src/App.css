@@ -9,8 +9,4 @@
 body {
   font-weight: 500 !important;
   font-family: 'Ubuntu', sans-serif !important;
-  /* font-family: 'Rajdhani', sans-serif; */
-}
-.app {
-  background-image: url(./images/bg.png);
 }

@@ -14,7 +14,7 @@ const Header = () => {
             <CssBaseline />
             <AppBar position="static" elevation={0} className={classes.appBar}>
                 <Toolbar variant="dense" className={classes.toolbar}>
-                    <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+                    <Typography variant="h6"  noWrap className={classes.toolbarTitle}>
                         <Link to="/" className={classes.link} >
                             Train-E-Ticketing.com
                     </Link>
@@ -36,22 +36,22 @@ const Header = () => {
                     {
                         loggedInUser.name ?
                             <Link to="/Login" href="#" className={classes.link}>
-                                <Button color="Secondary" variant="contained" > Sign Out </Button>
+                                <Button variant="contained" > Sign Out </Button>
                             </Link>
                             :
-                            <Link to="/Login" href="#" color="Secondary" variant="outlined" className={classes.link}>
-                                <Button color="Secondary" variant="contained" > Login </Button>
+                            <Link to="/Login" href="#" className={classes.link}>
+                                <Button  variant="contained" > Login </Button>
                             </Link>
                     }
 
                     {
                         loggedInUser.name ?
                             <Link to="/Login" href="#" className={classes.link}>
-                                <Button color="Secondary" variant="contained" > <PersonIcon /> {loggedInUser.name} </Button>
+                                <Button  variant="contained" > <PersonIcon /> {loggedInUser.name} </Button>
                             </Link>
                             :
-                            <Link to="/Register" href="#" color="Secondary" variant="outlined" className={classes.link}>
-                                <Button color="Secondary" variant="contained" > Sign Up </Button>
+                            <Link to="/Register" href="#" className={classes.link}>
+                                <Button  variant="contained" > Sign Up </Button>
                             </Link>
                     }
 
