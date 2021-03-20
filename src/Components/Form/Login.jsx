@@ -10,7 +10,7 @@ import Header from '../Header/Header';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import ShopIcon from '@material-ui/icons/Shop';
 import SendIcon from '@material-ui/icons/Send';
-
+import GitHubIcon from '@material-ui/icons/GitHub';
 /************* validation **************** */
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -47,8 +47,8 @@ const Login = () => {
                 const credential = result.credential;
                 const token = credential.accessToken;
                 const { displayName, email } = result.user;
-                const signInUser = { name: displayName, email }
-                setLoggedInUser(signInUser)
+                const loggedInUser = { name: displayName, email }
+                setLoggedInUser(loggedInUser)
                 history.replace(from);
                 console.log(token);
             }).catch((error) => {
@@ -59,22 +59,21 @@ const Login = () => {
             });
     }
 
-    const facebookProvider = new firebase.auth.FacebookAuthProvider();
-    const facebookSignIn = () => {
+    var githubProvider = new firebase.auth.GithubAuthProvider();
+    const githubSignIn = () => {
         firebase
             .auth()
-            .signInWithPopup(facebookProvider)
+            .signInWithPopup(githubProvider)
             .then((result) => {
                 /** @type {firebase.auth.OAuthCredential} */
                 var credential = result.credential;
+                var token = credential.accessToken;
                 const { displayName, email } = result.user;
-                var accessToken = credential.accessToken;
-                const signInUser = { name: displayName, email }
-                setLoggedInUser(signInUser)
+                const loggedInUser = { name: displayName, email }
+                setLoggedInUser(loggedInUser)
                 history.replace(from);
-                console.log(accessToken);
-            })
-            .catch((error) => {
+                console.log(token);
+            }).catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 var email = error.email;
@@ -89,7 +88,7 @@ const Login = () => {
             <Container>
                 <Grid container spacing={3} direction="row" justify="center" alignItems="center">
                     <Grid item xs={12} sm={6} md={6} lg={4}>
-                        
+
                         <form onSubmit={handleSubmit(onSubmit)} style={{ marginTop: '2rem' }}>
                             <TextField
                                 type="text"
@@ -119,8 +118,8 @@ const Login = () => {
                         <Link to="/Register" variant="body2">
                             Already have an account? Sign in
                         </Link>
-                        <Button onClick={googleSignIn} style={{ marginTop: '1rem', }} type="submit" fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
-                        <Button onClick={facebookSignIn} style={{ margin: '5px 0', }} type="submit" fullWidth variant="contained" color="primary"> <FacebookIcon /> Facebook</Button>
+                        <Button onClick={googleSignIn} style={{ margin: '0.5rem 0', }} type="submit" fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
+                        <Button onClick={githubSignIn} type="submit" fullWidth variant="contained" color="primary"> <GitHubIcon /> Github</Button>
                     </Grid>
                 </Grid>
             </Container>

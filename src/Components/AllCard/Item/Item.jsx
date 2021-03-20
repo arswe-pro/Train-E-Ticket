@@ -21,7 +21,7 @@ const Item = ({ item }) => {
                     </Link>
 
                     <Typography color="textSecondary" gutterBottom>
-                        ${price}
+                        Seat Price: ${price}
                     </Typography>
 
                 </Paper>

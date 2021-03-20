@@ -1,9 +1,12 @@
+import { Table } from '@material-ui/core';
 import React from 'react';
 
 const SearchDetails = () => {
     return (
         <div>
-            Hello
+            <Table>
+
+            </Table>
         </div>
     );
 };

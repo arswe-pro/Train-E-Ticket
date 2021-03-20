@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import ResultMap from './ResultMap/ResultMap';
 import useStyles from '../Style/Style';
 import RoadMap from './RoadMap/RoadMap';
+import SearchDetails from './RoadMap/SearchDetails';
 
 
 const SearchResult = () => {
@@ -21,7 +22,7 @@ const SearchResult = () => {
                     <Grid item xs={12} sm={12} md={8} lg={9}>
                         <Paper className={classes.paper}>
                             <ResultMap />
-                           
+                            <SearchDetails />
                         </Paper>
                     </Grid>
                 </Grid>

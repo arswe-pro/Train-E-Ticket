@@ -24,7 +24,7 @@ function App() {
 
 					<Route path="/Home"> <Home /> </Route>
 
-					<Route path="/Destination"> <SearchLocation /> </Route>
+					<PrivateRoute path="/Destination"> <SearchLocation /> </PrivateRoute>
 
 					<Route path="/Blog"> <Blog /> </Route>
 
@@ -43,7 +43,6 @@ function App() {
 				</Switch>
 			</Router>
 		</UserContext.Provider >
-
 	);
 }
 
