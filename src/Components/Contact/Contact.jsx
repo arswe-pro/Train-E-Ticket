@@ -29,7 +29,7 @@ const Contact = () => {
             <Header />
             <Container>
                 <Grid container spacing={3} direction="row" justify="center" alignItems="center">
-                    <Grid item xs={12} sm={6} md={6} lg={4}>
+                    <Grid item xs={12} sm={8} md={6} lg={6}>
                         <form onSubmit={handleSubmit(onSubmit)} style={{ marginTop: '2rem' }}>
                             <TextField
                                 type="text"
