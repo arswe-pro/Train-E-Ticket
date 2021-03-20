@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDwx61cuSBx83SmYoOZGZU3huvsX2S1ITQ",
-    authDomain: "first-booking.firebaseapp.com",
-    projectId: "first-booking",
-    storageBucket: "first-booking.appspot.com",
-    messagingSenderId: "517476321892",
-    appId: "1:517476321892:web:15d2ba208634f619a5ad71"
+    apiKey: "AIzaSyBwKycCMqeb9N5ozB_hAziofuDXUqMSMSk",
+    authDomain: "train-e-ticket.firebaseapp.com",
+    projectId: "train-e-ticket",
+    storageBucket: "train-e-ticket.appspot.com",
+    messagingSenderId: "964043450220",
+    appId: "1:964043450220:web:ebd20f676a05b201497549"
 };
 
 export default firebaseConfig;
