@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import road from '../../images/road.jpg';
 import trains from '../../images/trains.jpg';
-import bg from '../../images/shot.jpg'
+import bg from '../../images/kk.jpg'
 // import comming from '../../images/comming.png'
 
 const useStyles = makeStyles((theme) => ({
@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     homeBg: {
-        backgroundImage: `linear-gradient(rgba(255,0,100, 0.4), rgba(22,22,222, 0.4)),url(${bg})`,
+        backgroundImage: `url(${bg})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         height: '100vh'
@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar: {
         borderBottom: `1px solid ${theme.palette.divider}`,
-        backgroundColor: '#1976d2'
     },
     toolbar: {
         flexWrap: 'wrap',
