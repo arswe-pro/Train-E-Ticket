@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "district": "Dhaka"
+    },
+    {
+        "id": 2,
+        "district": "Rajshahi"
+    },
+    {
+        "id": 3,
+        "district": "Chittagong"
+    },
+    {
+        "id": 4,
+        "district": "Khulna"
+    },
+    {
+        "id": 5,
+        "district": "Rangpur"
+    },
+
+    {
+        "id": 6,
+        "district": "Barisal"
+    },
+    {
+        "id": 7,
+        "district": "Mymensingh"
+    }
+]

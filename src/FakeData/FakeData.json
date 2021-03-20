@@ -3,7 +3,7 @@
         "id": 1,
         "title": "AC-B",
         "price": 145,
-        "img": "http://dummyimage.com/134x169.jpg/cc0000/ffffff",
+        "img": "https://bangladeshfact.com/wp-content/uploads/2017/11/CTG-1.jpg",
         "logo": "http://dummyimage.com/145x228.png/cc0000/ffffff",
         "division": "Civil Engineer",
         "description": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio."
@@ -12,16 +12,16 @@
         "id": 2,
         "title": "AC-S",
         "price": 85,
-        "img": "http://dummyimage.com/209x131.png/dddddd/000000",
+        "img": "https://www.thailandtrains.com/wp-content/uploads/2020/07/2nd-Class-AC-Seat-on-a-Thailand-Train.jpg",
         "logo": "http://dummyimage.com/107x106.bmp/dddddd/000000",
         "division": "Safety Technician I",
         "description": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus."
     },
     {
         "id": 3,
-        "title": "SNINDHA",
+        "title": "Room",
         "price": 314,
-        "img": "http://dummyimage.com/191x125.bmp/ff4444/ffffff",
+        "img": "https://travelblog.paytm.com/wp-content/uploads/2019/07/train.jpg",
         "logo": "http://dummyimage.com/103x112.bmp/dddddd/000000",
         "division": "Geological Engineer",
         "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet."
@@ -30,7 +30,7 @@
         "id": 4,
         "title": "S_CHAIR",
         "price": 120,
-        "img": "http://dummyimage.com/112x134.png/ff4444/ffffff",
+        "img": "https://nijhoom.com/wp-content/uploads/2012/08/maitree_express_inside.jpg",
         "logo": "http://dummyimage.com/224x190.bmp/dddddd/000000",
         "division": "Assistant Media Planner",
         "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla."

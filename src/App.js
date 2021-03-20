@@ -9,6 +9,7 @@ import SearchLocation from './Components/SearchLocation/SearchLocation';
 import { createContext, useState } from 'react';
 import SearchResult from './Components/SearchResult/SearchResult';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Blog from './Components/Blog/Blog';
 
 export const UserContext = createContext();
 function App() {
@@ -22,15 +23,19 @@ function App() {
 
 					<Route path="/Home"> <Home /> </Route>
 
+					<Route path="/Destination"> <SearchLocation /> </Route>
+
+					<Route path="/Blog"> <Blog /> </Route>
+
 					<Route path="/Contact"> <Contact /> </Route>
 
-					<PrivateRoute  path="/SearchLocation/:title"> <SearchLocation /> </PrivateRoute>
+					<PrivateRoute path="/SearchLocation/:title"> <SearchLocation /> </PrivateRoute>
 
 					<Route path="/Login"> <Login /> </Route>
 
 					<Route path="/Register"> <Register /> </Route>
 
-					<PrivateRoute path="/SearchResult"> <SearchResult /> </PrivateRoute>
+					<PrivateRoute path="/SearchResult/:"> <SearchResult /> </PrivateRoute>
 
 					<Route path="*"> <NoMatch /> </Route>
 

@@ -1,3 +1,5 @@
+// import firebase from "firebase/app";
+
 import { Button, Container, Grid, TextField } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -21,8 +23,18 @@ const Register = () => {
         mode: "onChange",
         resolver: yupResolver(schema)
     })
-    const onSubmit = data => console.log(data);
-    console.log(errors);
+
+    const onSubmit = values => {
+        // firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+        //     .then((userCredential) => {
+        //     })
+        //     .catch((error) => {
+        //         var errorCode = error.code;
+        //         var errorMessage = error.message;
+        //         console.log(errorCode, errorMessage);
+        //     });
+    }
+
     return (
         <>
             <Header />
@@ -77,8 +89,6 @@ const Register = () => {
                                 error={Boolean(errors.confirmPassword)}
                                 helperText={errors.confirmPassword?.message}
                             />
-
-
                             <Button type="submit" fullWidth variant="contained" color="secondary">Sign UP</Button>
                         </form>
                         <Link to="/Login" variant="body2">

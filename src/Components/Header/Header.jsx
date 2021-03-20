@@ -12,7 +12,7 @@ const Header = () => {
             <AppBar position="static" elevation={0} className={classes.appBar}>
                 <Toolbar variant="dense" className={classes.toolbar}>
                     <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-                        React Lover
+                        train-E-sheba.com
                     </Typography>
                     <nav>
                         <Link to="/" variant="button" color="textPrimary" href="#" className={classes.link}>

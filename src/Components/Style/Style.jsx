@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import road from '../../images/road.jpg';
 import trains from '../../images/trains.jpg';
 import bg from '../../images/shot.jpg'
+// import comming from '../../images/comming.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -57,8 +58,12 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
     },
+
     mt: {
         marginTop: '2rem',
+    },
+    textAlign: {
+        textAlign: 'center',
     }
 }));
 
