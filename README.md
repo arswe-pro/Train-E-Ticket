@@ -31,7 +31,7 @@ A single page Train-E-Ticket booking app where people are able to Choice Her Sea
 * Materials ui custom css
 * Firebase authentication
 
-### Third Party React Components
+### Third Party
 * FakeData
 * Division FakeData
 * React-Hook-Form
