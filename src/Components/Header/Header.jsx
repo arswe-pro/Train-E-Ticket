@@ -1,4 +1,4 @@
-import { AppBar, CssBaseline, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, CssBaseline, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../Auth/useAuth';
@@ -41,11 +41,22 @@ const Header = () => {
                     {
                         auth.user ?
                             <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link} onClick={handleSignOut}>
-                                Sign Out <PersonIcon />  {auth.user.name}
+                                <Button variant="contained" > Sign Out </Button>
                             </Link>
                             :
                             <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link}>
-                                Login
+                                <Button variant="contained" > Login </Button>
+                            </Link>
+                    }
+
+                    {
+                        auth.user ?
+
+                            <Button variant="contained" ><PersonIcon />  {auth.user.name} </Button>
+
+                            :
+                            <Link to="/Register" href="#" color="primary" variant="outlined" className={classes.link}>
+                                <Button variant="contained" > Sign Up </Button>
                             </Link>
                     }
 
