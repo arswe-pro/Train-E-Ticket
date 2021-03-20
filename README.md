@@ -7,12 +7,11 @@ A single page Train-E-Ticket booking app where people are able to Choice Her Sea
 * Netlify
 * Firebase Authentication
 
- -> netlify [Live Website](https://train-e-ticket.netlify.app/)
-
--> firebase [Live Website](https://train-e-ticket.netlify.app/) 
+* netlify [Live Website](https://train-e-ticket.netlify.app/)
+* firebase [Live Website](https://train-e-ticket.netlify.app/) 
 
 ### Features
-* train ticket Choice
+* Train Ticket Choice Online
 * Sign in && Sign up
 * Validation 
 * Destination
@@ -32,7 +31,7 @@ A single page Train-E-Ticket booking app where people are able to Choice Her Sea
 * Materials ui custom css
 * Firebase authentication
 
-### third party react components
+### Third Party React Components
 * FakeData
 * Division FakeData
 * React-Hook-Form
