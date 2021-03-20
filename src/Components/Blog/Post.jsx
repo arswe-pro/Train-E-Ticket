@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardContent, CardMedia, Grid, Hidden, Paper, Typography } from '@material-ui/core';
+import { Card, CardActionArea, CardContent, Grid, Hidden, Typography } from '@material-ui/core';
 import React from 'react';
 
 const Post = ({ post }) => {

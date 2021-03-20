@@ -25,14 +25,9 @@ const Register = () => {
     })
 
     const onSubmit = values => {
-        // firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-        //     .then((userCredential) => {
-        //     })
-        //     .catch((error) => {
-        //         var errorCode = error.code;
-        //         var errorMessage = error.message;
-        //         console.log(errorCode, errorMessage);
-        //     });
+        if (values.name && values.email && values.password && values.confirmPassword) {
+            console.log(values.name, values.email, values.password, values.confirmPassword);
+        }
     }
 
     return (

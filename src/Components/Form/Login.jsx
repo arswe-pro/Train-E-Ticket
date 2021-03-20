@@ -3,14 +3,10 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config'
 import { UserContext } from '../../App';
 /*************** Auth End **************** */
-
-import { Button, CardMedia, Container, Grid, TextField } from '@material-ui/core';
+import { Button, Container, Grid, TextField } from '@material-ui/core';
 import React, { useContext } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
-
-
-
 import FacebookIcon from '@material-ui/icons/Facebook';
 import ShopIcon from '@material-ui/icons/Shop';
 import SendIcon from '@material-ui/icons/Send';
@@ -20,15 +16,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useForm } from 'react-hook-form';
 
-
 const schema = yup.object().shape({
     email: yup.string().required().email(),
     password: yup.string().required().min(6)
 });
-
 /************* validation End**************** */
-
-
 
 const Login = () => {
 
@@ -41,12 +33,10 @@ const Login = () => {
         resolver: yupResolver(schema)
     })
     const onSubmit = data => console.log(data);
-
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const history = useHistory();
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
-
 
     const GoogleProvider = new firebase.auth.GoogleAuthProvider();
     const googleSignIn = () => {
