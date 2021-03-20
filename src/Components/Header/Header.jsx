@@ -1,57 +1,51 @@
-import { AppBar, Button, CssBaseline, Toolbar, Typography } from '@material-ui/core';
-import React, { useContext } from 'react';
+import { AppBar, CssBaseline, Toolbar, Typography } from '@material-ui/core';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../App';
+import { useAuth } from '../Auth/useAuth';
 import useStyles from '../Style/Style';
 import PersonIcon from '@material-ui/icons/Person';
 
 const Header = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-
+    const auth = useAuth();
+    const handleSignOut = () => {
+        auth.signOut()
+            .then(res => {
+                window.location.pathname = '/';
+            })
+    }
     const classes = useStyles();
     return (
         <div className={classes.root} >
             <CssBaseline />
             <AppBar position="static" elevation={0} className={classes.appBar}>
                 <Toolbar variant="dense" className={classes.toolbar}>
-                    <Typography variant="h6"  noWrap className={classes.toolbarTitle}>
+                    <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
                         <Link to="/" className={classes.link} >
                             Train-E-Ticketing.com
                     </Link>
                     </Typography>
                     <nav>
-                        <Link to="/" href="#" className={classes.link}>
+                        <Link to="/" variant="button" color="textPrimary" href="#" className={classes.link}>
                             Home
                         </Link>
-                        <Link to="/Destination" href="#" className={classes.link}>
+                        <Link to="/Destination" variant="button" color="textPrimary" href="#" className={classes.link}>
                             Destination
                         </Link>
-                        <Link to="/Blog" href="#" className={classes.link}>
+                        <Link to="/Blog" variant="button" color="textPrimary" href="#" className={classes.link}>
                             Blog
                         </Link>
-                        <Link to="/Contact" href="#" className={classes.link}>
+                        <Link to="/Contact" variant="button" color="textPrimary" href="#" className={classes.link}>
                             Contact
                         </Link>
                     </nav>
                     {
-                        loggedInUser.name ?
-                            <Link to="/Login" href="#" className={classes.link}>
-                                <Button variant="contained" > Sign Out </Button>
+                        auth.user ?
+                            <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link} onClick={handleSignOut}>
+                                Sign Out <PersonIcon />  {auth.user.name}
                             </Link>
                             :
-                            <Link to="/Login" href="#" className={classes.link}>
-                                <Button  variant="contained" > Login </Button>
-                            </Link>
-                    }
-
-                    {
-                        loggedInUser.name ?
-                            <Link to="/Login" href="#" className={classes.link}>
-                                <Button  variant="contained" > <PersonIcon /> {loggedInUser.name} </Button>
-                            </Link>
-                            :
-                            <Link to="/Register" href="#" className={classes.link}>
-                                <Button  variant="contained" > Sign Up </Button>
+                            <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link}>
+                                Login
                             </Link>
                     }
 

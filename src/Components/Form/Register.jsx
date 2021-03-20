@@ -9,6 +9,7 @@ import account from '../../images/account.svg'
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useForm } from 'react-hook-form';
+import { useAuth } from '../Auth/useAuth';
 
 
 const schema = yup.object().shape({
@@ -19,6 +20,7 @@ const schema = yup.object().shape({
 });
 
 const Register = () => {
+    const auth = useAuth();
     const { register, handleSubmit, errors } = useForm({
         mode: "onChange",
         resolver: yupResolver(schema)
@@ -26,7 +28,10 @@ const Register = () => {
 
     const onSubmit = values => {
         if (values.name && values.email && values.password && values.confirmPassword) {
-            console.log(values.name, values.email, values.password, values.confirmPassword);
+            const registerStatus = auth.register(values.name, values.email, values.password);
+            if(registerStatus===true){
+                console.log("success");
+            }
         }
     }
 

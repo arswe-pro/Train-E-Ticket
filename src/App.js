@@ -10,39 +10,44 @@ import { createContext, useState } from 'react';
 import SearchResult from './Components/SearchResult/SearchResult';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Blog from './Components/Blog/Blog';
+import Auth, { AuthContextProvider } from './Components/Auth/useAuth';
 
 export const UserContext = createContext();
-
 function App() {
-	const [loggedInUser, setLoggedInUser] = useState({})
+	const auth = Auth();
+	console.log(auth);
 	return (
-		<UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-			<Router>
-				<Switch>
+		auth && auth.user === undefined || auth.user ?
+			<AuthContextProvider>
+				<Router>
+					<Switch>
 
-					<Route exact path="/"> <Home /> </Route>
+						<Route exact path="/"> <Home /> </Route>
 
-					<Route path="/Home"> <Home /> </Route>
+						<Route path="/Home"> <Home /> </Route>
 
-					<PrivateRoute path="/Destination"> <SearchLocation /> </PrivateRoute>
+						<PrivateRoute path="/Destination"> <SearchLocation /> </PrivateRoute>
 
-					<Route path="/Blog"> <Blog /> </Route>
+						<Route path="/Blog"> <Blog /> </Route>
 
-					<Route path="/Contact"> <Contact /> </Route>
+						<Route path="/Contact"> <Contact /> </Route>
 
-					<PrivateRoute path="/SearchLocation/:title"> <SearchLocation /> </PrivateRoute>
+						<PrivateRoute path="/SearchLocation/:title"> <SearchLocation /> </PrivateRoute>
 
-					<Route path="/Login"> <Login /> </Route>
+						<Route path="/Login"> <Login /> </Route>
 
-					<Route path="/Register"> <Register /> </Route>
+						<Route path="/Register"> <Register /> </Route>
 
-					<PrivateRoute path="/SearchResult/"> <SearchResult /> </PrivateRoute>
+						<PrivateRoute path="/SearchResult/:title/:pickFrom/:pickTo/:date"> <SearchResult /> </PrivateRoute>
 
-					<Route path="*"> <NoMatch /> </Route>
+						<Route path="*"> <NoMatch /> </Route>
 
-				</Switch>
-			</Router>
-		</UserContext.Provider >
+					</Switch>
+				</Router>
+			</AuthContextProvider>
+			:
+			<h1>Loading</h1>
+
 	);
 }
 

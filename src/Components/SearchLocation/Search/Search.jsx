@@ -5,7 +5,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import DistrictDate from '../../../FakeData/DistrictData.json'
 
-const Search = () => {
+const Search = ({ title }) => {
 
     const [districts, setDistricts] = useState(DistrictDate)
     console.log(districts);
@@ -14,20 +14,9 @@ const Search = () => {
         setDistricts(districts)
     }, [districts])
 
-    const [pinkFrom, setPinkFrom] = React.useState('');
-    const [pinkTo, setPinkTo] = React.useState('');
-
-    const handlePickFrom = (event) => {
-        setPinkFrom(event.target.value);
-    };
-
-    const handlePinkTo = (event) => {
-        setPinkTo(event.target.value);
-    };
-
-    console.log(pinkFrom);
-    console.log(pinkTo);
-
+    const [pickFrom, setPickFrom] = useState('');
+    const [pickTo, setPickTo] = useState('');
+    const [date, setDate] = useState('');
 
     return (
         <div>
@@ -39,8 +28,8 @@ const Search = () => {
                     label="Select"
                     fullWidth
                     margin="normal"
-                    value={pinkFrom}
-                    onChange={handlePickFrom}
+                    value={pickFrom}
+                    onChange={(event) => setPickFrom(event.target.value)}
                 >
                     {districts.map((district) => (
                         <MenuItem key={district.id} value={district.district}>
@@ -54,9 +43,9 @@ const Search = () => {
                     select
                     label="Select"
                     margin="normal"
-                    value={pinkTo}
+                    value={pickTo}
                     fullWidth
-                    onChange={handlePinkTo}
+                    onChange={(event) => setPickTo(event.target.value)}
                 >
                     {districts.map((district) => (
                         <MenuItem key={district.id} value={district.district}>
@@ -67,13 +56,14 @@ const Search = () => {
 
                 <TextField
                     type="date"
-                    name="password"
+                    name="date"
                     margin="normal"
                     fullWidth
                     variant="filled"
                     autoComplete="off"
+                    onChange={(event) => setDate(event.target.value)}
                 />
-                <Link to="/SearchResult">
+                <Link to={`/SearchResult/${title}/${pickFrom}/${pickTo}/${date}`}>
                     <Button type="submit" fullWidth variant="contained" color="primary" style={{ margin: '01rem 0' }}><SearchIcon /> Search</Button>
                 </Link>
 

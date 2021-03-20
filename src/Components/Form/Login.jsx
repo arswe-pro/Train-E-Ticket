@@ -1,86 +1,42 @@
-import firebase from "firebase/app";
-import "firebase/auth";
-import firebaseConfig from './firebase.config'
-import { UserContext } from '../../App';
-/*************** Auth End **************** */
 import { Button, Container, Grid, TextField } from '@material-ui/core';
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import ShopIcon from '@material-ui/icons/Shop';
 import SendIcon from '@material-ui/icons/Send';
-import GitHubIcon from '@material-ui/icons/GitHub';
+
 /************* validation **************** */
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useForm } from 'react-hook-form';
+import Auth from '../Auth/useAuth';
 
 const schema = yup.object().shape({
     email: yup.string().required().email(),
     password: yup.string().required().min(6)
 });
-/************* validation End**************** */
 
 const Login = () => {
-
-    if (!firebase.apps.length) {
-        firebase.initializeApp(firebaseConfig);
-    }
-    /**** Validation **** */
+    const auth = Auth();
+    const history = useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: "/" } };
     const { register, handleSubmit, errors } = useForm({
         mode: "onChange",
         resolver: yupResolver(schema)
     })
-    const onSubmit = data => console.log(data);
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-    const history = useHistory();
-    const location = useLocation();
-    const { from } = location.state || { from: { pathname: "/" } };
-
-    const GoogleProvider = new firebase.auth.GoogleAuthProvider();
-    const googleSignIn = () => {
-        firebase.auth()
-            .signInWithPopup(GoogleProvider)
-            .then((result) => {
-                /** @type {firebase.auth.OAuthCredential} */
-                const credential = result.credential;
-                const token = credential.accessToken;
-                const { displayName, email } = result.user;
-                const loggedInUser = { name: displayName, email }
-                setLoggedInUser(loggedInUser)
-                history.replace(from);
-                console.log(token);
-            }).catch((error) => {
-                const errorCode = error.code;
-                const email = error.email;
-                const credential = error.credential;
-                console.log(errorCode, email, credential);
-            });
+    const onSubmit = values => {
+        handleSignIn(values.email, values.password)
     }
-
-    var githubProvider = new firebase.auth.GithubAuthProvider();
-    const githubSignIn = () => {
-        firebase
-            .auth()
-            .signInWithPopup(githubProvider)
-            .then((result) => {
-                /** @type {firebase.auth.OAuthCredential} */
-                var credential = result.credential;
-                var token = credential.accessToken;
-                const { displayName, email } = result.user;
-                const loggedInUser = { name: displayName, email }
-                setLoggedInUser(loggedInUser)
-                history.replace(from);
-                console.log(token);
-            }).catch((error) => {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                var email = error.email;
-                var credential = error.credential;
-                console.log(errorCode, email, errorMessage, credential);
-            });
+    const handleSignIn = (email, password)=>{
+        auth.signInWithEmailAndPassword(email, password)
+        .then(res =>{
+            console.log(res);
+            history.replace(from);   
+        })
     }
+ 
 
     return (
         <>
@@ -116,10 +72,10 @@ const Login = () => {
                         </form>
 
                         <Link to="/Register" variant="body2">
-                            Already have an account? Sign in
+                            Haven't any account? Register
                         </Link>
-                        <Button onClick={googleSignIn} style={{ margin: '0.5rem 0', }} type="submit" fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
-                        <Button onClick={githubSignIn} type="submit" fullWidth variant="contained" color="primary"> <GitHubIcon /> Github</Button>
+                        <Button style={{ marginTop: '1rem', }} type="submit" fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
+                        <Button style={{ margin: '5px 0', }} type="submit" fullWidth variant="contained" color="primary"> <FacebookIcon /> Facebook</Button>
                     </Grid>
                 </Grid>
             </Container>

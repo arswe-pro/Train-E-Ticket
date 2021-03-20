@@ -15,16 +15,16 @@ const SearchLocation = () => {
             <Header />
             <Container>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} sm={12} md={4} lg={3}>
+                    <Grid item xs={12} sm={12} md={5} lg={4}>
 
                         <Paper className={classes.paper}>
                             <Typography variant="h5" component="h2">
                                 Your Choice: {title}
                             </Typography>
-                            <Search />
+                            <Search title={title}/>
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={8} lg={9}>
+                    <Grid item xs={12} sm={12} md={7} lg={8}>
                         <Paper className={classes.paper}>
                             <Map />
                         </Paper>

@@ -3,26 +3,26 @@ import React from 'react';
 import Header from '../Header/Header';
 import ResultMap from './ResultMap/ResultMap';
 import useStyles from '../Style/Style';
-import RoadMap from './RoadMap/RoadMap';
 import SearchDetails from './RoadMap/SearchDetails';
+import { useParams } from 'react-router';
 
 
 const SearchResult = () => {
+    const searchResult = useParams();
     const classes = useStyles();
     return (
         <div className={classes.searchResultBg}>
             <Header />
             <Container>
-                <Grid container spacing={3}>
-                    <Grid item xs={12} sm={12} md={4} lg={3}>
+                <Grid container spacing={3} className={classes.mt}>
+                    <Grid item xs={12} sm={12} md={5} lg={4}>
                         <Paper className={classes.paper}>
-                            <RoadMap />
+                            <SearchDetails searchResult={searchResult} />
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={8} lg={9}>
+                    <Grid item xs={12} sm={12} md={7} lg={8}>
                         <Paper className={classes.paper}>
                             <ResultMap />
-                            <SearchDetails />
                         </Paper>
                     </Grid>
                 </Grid>
