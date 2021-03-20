@@ -12,6 +12,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Blog from './Components/Blog/Blog';
 
 export const UserContext = createContext();
+
 function App() {
 	const [loggedInUser, setLoggedInUser] = useState({})
 	return (

@@ -1,10 +1,13 @@
-import { AppBar, CssBaseline, Toolbar, Typography } from '@material-ui/core';
-import React from 'react';
+import { AppBar, Button, CssBaseline, Toolbar, Typography } from '@material-ui/core';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import useStyles from '../Style/Style';
-
+import PersonIcon from '@material-ui/icons/Person';
 
 const Header = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+
     const classes = useStyles();
     return (
         <div className={classes.root} >
@@ -17,22 +20,41 @@ const Header = () => {
                     </Link>
                     </Typography>
                     <nav>
-                        <Link to="/" variant="button" color="textPrimary" href="#" className={classes.link}>
+                        <Link to="/" href="#" className={classes.link}>
                             Home
                         </Link>
-                        <Link to="/Destination" variant="button" color="textPrimary" href="#" className={classes.link}>
+                        <Link to="/Destination" href="#" className={classes.link}>
                             Destination
                         </Link>
-                        <Link to="/Blog" variant="button" color="textPrimary" href="#" className={classes.link}>
+                        <Link to="/Blog" href="#" className={classes.link}>
                             Blog
                         </Link>
-                        <Link to="/Contact" variant="button" color="textPrimary" href="#" className={classes.link}>
+                        <Link to="/Contact" href="#" className={classes.link}>
                             Contact
                         </Link>
                     </nav>
-                    <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link}>
-                        Login
-                    </Link>
+                    {
+                        loggedInUser.name ?
+                            <Link to="/Login" href="#" className={classes.link}>
+                                <Button color="Secondary" variant="contained" > Sign Out </Button>
+                            </Link>
+                            :
+                            <Link to="/Login" href="#" color="Secondary" variant="outlined" className={classes.link}>
+                                <Button color="Secondary" variant="contained" > Login </Button>
+                            </Link>
+                    }
+
+                    {
+                        loggedInUser.name ?
+                            <Link to="/Login" href="#" className={classes.link}>
+                                <Button color="Secondary" variant="contained" > <PersonIcon /> {loggedInUser.name} </Button>
+                            </Link>
+                            :
+                            <Link to="/Register" href="#" color="Secondary" variant="outlined" className={classes.link}>
+                                <Button color="Secondary" variant="contained" > Sign Up </Button>
+                            </Link>
+                    }
+
                 </Toolbar>
             </AppBar>
         </div>
