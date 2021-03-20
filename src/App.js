@@ -35,7 +35,7 @@ function App() {
 
 					<Route path="/Register"> <Register /> </Route>
 
-					<PrivateRoute path="/SearchResult/:"> <SearchResult /> </PrivateRoute>
+					<PrivateRoute path="/SearchResult/"> <SearchResult /> </PrivateRoute>
 
 					<Route path="*"> <NoMatch /> </Route>
 

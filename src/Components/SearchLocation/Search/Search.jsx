@@ -73,7 +73,7 @@ const Search = () => {
                     variant="filled"
                     autoComplete="off"
                 />
-                <Link to={"/SearchResult/"}>
+                <Link to="/SearchResult">
                     <Button type="submit" fullWidth variant="contained" color="primary" style={{ margin: '01rem 0' }}><SearchIcon /> Search</Button>
                 </Link>
 

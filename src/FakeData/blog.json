@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "title": "AC-B",
+        "price": 145,
+        "date": "1/20/2021",
+        "img": "https://bangladeshfact.com/wp-content/uploads/2017/11/CTG-1.jpg",
+        "description": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio."
+    },
+    {
+        "id": 2,
+        "title": "AC-S",
+        "price": 85,
+        "date": "1/20/2021",
+        "img": "https://www.thailandtrains.com/wp-content/uploads/2020/07/2nd-Class-AC-Seat-on-a-Thailand-Train.jpg",
+        "description": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus."
+    },
+    {
+        "id": 3,
+        "title": "Personal Room",
+        "price": 1000,
+        "date": "1/20/2021",
+        "img": "https://travelblog.paytm.com/wp-content/uploads/2019/07/train.jpg",
+        "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet."
+    },
+    {
+        "id": 4,
+        "title": "AC-S",
+        "price": 85,
+        "date": "1/20/2021",
+        "img": "https://www.thailandtrains.com/wp-content/uploads/2020/07/2nd-Class-AC-Seat-on-a-Thailand-Train.jpg",
+        "description": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus."
+    },
+    {
+        "id": 5,
+        "title": "Personal Room",
+        "price": 1000,
+        "date": "1/20/2021",
+        "img": "https://travelblog.paytm.com/wp-content/uploads/2019/07/train.jpg",
+        "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet."
+    },
+    {
+        "id": 6,
+        "title": "AC-S",
+        "price": 85,
+        "date": "1/20/2021",
+        "img": "https://www.thailandtrains.com/wp-content/uploads/2020/07/2nd-Class-AC-Seat-on-a-Thailand-Train.jpg",
+        "description": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus."
+    },
+    {
+        "id": 7,
+        "title": "Personal Room",
+        "price": 1000,
+        "date": "1/20/2021",
+        "img": "https://travelblog.paytm.com/wp-content/uploads/2019/07/train.jpg",
+        "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet."
+    },
+    {
+        "id": 8,
+        "title": "S_CHAIR",
+        "price": 120,
+        "date": "1/20/2021",
+        "img": "https://nijhoom.com/wp-content/uploads/2012/08/maitree_express_inside.jpg",
+        "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla."
+    }
+]
