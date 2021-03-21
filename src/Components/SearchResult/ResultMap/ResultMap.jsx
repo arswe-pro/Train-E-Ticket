@@ -4,8 +4,8 @@ import { Map, Marker } from 'pigeon-maps';
 const ResultMap = () => {
     return (
         <div>
-            <Map height={400} defaultCenter={[50.879, 4.6997]} defaultZoom={11}>
-                <Marker width={50} anchor={[50.879, 4.6997]} />
+             <Map height={400} defaultCenter={[22.845640, 89.540329]} defaultZoom={11}>
+                <Marker width={50} anchor={[22.845640, 89.540329]} />
             </Map>
         </div>
     );

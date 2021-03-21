@@ -11,6 +11,7 @@ import SearchResult from './Components/SearchResult/SearchResult';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Blog from './Components/Blog/Blog';
 import Auth, { AuthContextProvider } from './Components/Auth/useAuth';
+import loader from './images/loader.gif'
 
 export const UserContext = createContext();
 function App() {
@@ -35,7 +36,7 @@ function App() {
 				</Router>
 			</AuthContextProvider>
 			:
-			<h1>Loading</h1>
+			<img src={loader.gif} alt=""/>
 
 	);
 }
