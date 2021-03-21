@@ -49,12 +49,14 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${road})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        height: '100vh'
     },
 
     searchLocationBg: {
         backgroundImage: `url(${trains})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        height: '100vh',
     },
 
     mt: {

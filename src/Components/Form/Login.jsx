@@ -2,7 +2,6 @@ import { Button, Container, Grid, TextField } from '@material-ui/core';
 import React from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import ShopIcon from '@material-ui/icons/Shop';
 import SendIcon from '@material-ui/icons/Send';
 
@@ -10,7 +9,7 @@ import SendIcon from '@material-ui/icons/Send';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useForm } from 'react-hook-form';
-import Auth from '../Auth/useAuth';
+import { useAuth } from '../Auth/useAuth';
 
 const schema = yup.object().shape({
     email: yup.string().required().email(),
@@ -18,7 +17,7 @@ const schema = yup.object().shape({
 });
 
 const Login = () => {
-    const auth = Auth();
+    const auth = useAuth();
     const history = useHistory();
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
@@ -29,15 +28,20 @@ const Login = () => {
     const onSubmit = values => {
         handleSignIn(values.email, values.password)
     }
-    const handleSignIn = (email, password)=>{
+    const handleSignIn = (email, password) => {
         auth.signInWithEmailAndPassword(email, password)
-        .then(res =>{
-            console.log(res);
-            history.replace(from);   
-        })
+            .then(res => {
+                console.log(res);
+                history.replace(from);
+            })
     }
- 
-
+    const handleGoogleSignIn = () => {
+        auth.signInWithGoogle()
+            .then(res => {
+                console.log(res);
+                history.replace(from);
+            })
+    }
     return (
         <>
             <Header />
@@ -74,8 +78,7 @@ const Login = () => {
                         <Link to="/Register" variant="body2">
                             Haven't any account? Register
                         </Link>
-                        <Button style={{ marginTop: '1rem', }} type="submit" fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
-                        <Button style={{ margin: '5px 0', }} type="submit" fullWidth variant="contained" color="primary"> <FacebookIcon /> Facebook</Button>
+                        <Button onClick={handleGoogleSignIn} style={{ marginTop: '1rem', }} fullWidth variant="contained" color="primary"><ShopIcon /> Google</Button>
                     </Grid>
                 </Grid>
             </Container>

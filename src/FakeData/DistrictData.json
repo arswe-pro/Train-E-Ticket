@@ -1,31 +1,45 @@
 [
     {
         "id": 1,
-        "district": "Dhaka"
+        "district": "Dhaka",
+        "Latitude": "23.810331",
+        "Longitude": "90.412521"
     },
     {
         "id": 2,
-        "district": "Rajshahi"
+        "district": "Rajshahi",
+        "Latitude": "24.363588",
+        "Longitude": "88.624138"
     },
     {
         "id": 3,
-        "district": "Chittagong"
+        "district": "Chittagong",
+        "Latitude": "22.356852",
+        "Longitude": "91.783180"
     },
     {
         "id": 4,
-        "district": "Khulna"
+        "district": "Khulna",
+        "Latitude": "22.845640",
+        "Longitude": "89.540329"
     },
     {
         "id": 5,
-        "district": "Rangpur"
+        "district": "rangpur",
+        "Latitude": "25.833558",
+        "Longitude": "88.9939966"
     },
 
     {
         "id": 6,
-        "district": "Barisal"
+        "district": "Barisal",
+        "Latitude": "40.741895",
+        "Longitude": "-73.989308"
     },
     {
         "id": 7,
-        "district": "Mymensingh"
+        "district": "Mymensingh",
+        "Latitude": "24.8386014",
+        "Longitude": "90.4112695"
     }
 ]

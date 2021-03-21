@@ -1,5 +1,5 @@
 import { Box, Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@material-ui/core';
-
+import HeightIcon from '@material-ui/icons/Height';
 import React, { useEffect, useState } from 'react';
 import FakeData from '../../../FakeData/FakeData.json'
 
@@ -13,6 +13,7 @@ const SearchDetails = ({ searchResult }) => {
     useEffect(() => {
         setSeat(FakeData.find(item => item.title === title))
     }, [title])
+    
     return (
         <div>
 
@@ -22,7 +23,7 @@ const SearchDetails = ({ searchResult }) => {
                 </Typography>
 
                 <Typography variant="h4">
-                    ||
+                    <HeightIcon />
                 </Typography>
 
                 <Typography variant="h4">
@@ -32,8 +33,7 @@ const SearchDetails = ({ searchResult }) => {
             <Table>
                 <TableHead>
                     <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Amount</TableCell>
+                        <TableCell>Seat</TableCell>
                         <TableCell>Price</TableCell>
                         <TableCell>Date</TableCell>
                     </TableRow>
@@ -42,7 +42,6 @@ const SearchDetails = ({ searchResult }) => {
                 <TableBody>
                     <TableRow>
                         <TableCell> <img src={seat && seat.img} width="50" alt="" /> </TableCell>
-                        <TableCell> {title}</TableCell>
                         <TableCell> {seat && seat.price}</TableCell>
                         <TableCell> {date}</TableCell>
                     </TableRow>

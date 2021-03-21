@@ -38,27 +38,30 @@ const Header = () => {
                             Contact
                         </Link>
                     </nav>
-                    {
-                        auth.user ?
-                            <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link} onClick={handleSignOut}>
-                                <Button variant="contained" > Sign Out </Button>
-                            </Link>
-                            :
-                            <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link}>
-                                <Button variant="contained" > Login </Button>
-                            </Link>
-                    }
+
+
 
                     {
                         auth.user ?
 
                             <Button variant="contained" ><PersonIcon />  {auth.user.name} </Button>
-
                             :
                             <Link to="/Register" href="#" color="primary" variant="outlined" className={classes.link}>
                                 <Button variant="contained" > Sign Up </Button>
                             </Link>
                     }
+
+                    {
+                        auth.user ?
+                            <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link} onClick={handleSignOut}>
+                                <Button variant="contained" color="secondary"> Sign Out </Button>
+                            </Link>
+                            :
+                            <Link to="/Login" href="#" color="primary" variant="outlined" className={classes.link}>
+                                <Button variant="contained" color="secondary"> Login </Button>
+                            </Link>
+                    }
+
 
                 </Toolbar>
             </AppBar>

@@ -3,7 +3,8 @@ import React from 'react';
 import { useParams } from 'react-router';
 import Header from '../Header/Header';
 import useStyles from '../Style/Style'
-import Map from './Map/Map';
+import Mapping from './Mapping/Mapping';
+
 import Search from './Search/Search';
 
 const SearchLocation = () => {
@@ -14,7 +15,7 @@ const SearchLocation = () => {
         <div className={classes.searchLocationBg}>
             <Header />
             <Container>
-                <Grid container spacing={3}>
+                <Grid container spacing={3} className={classes.mt}>
                     <Grid item xs={12} sm={12} md={5} lg={4}>
 
                         <Paper className={classes.paper}>
@@ -26,7 +27,7 @@ const SearchLocation = () => {
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} lg={8}>
                         <Paper className={classes.paper}>
-                            <Map />
+                            <Mapping />
                         </Paper>
                     </Grid>
                 </Grid>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map, Marker } from 'pigeon-maps';
 
-const ResultMap = () => {
+const Mapping = () => {
     return (
         <div>
             <Map height={400} defaultCenter={[50.879, 4.6997]} defaultZoom={11}>
@@ -11,4 +11,4 @@ const ResultMap = () => {
     );
 };
 
-export default ResultMap;
+export default Mapping;
